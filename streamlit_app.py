@@ -3,8 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.preprocessing import StandardScaler
-scaler=StandardScaler()
+from Scikitlearn.preprocessing import StandardScaler
 from PIL import Image
 from datetime import datetime, date
 import matplotlib.pyplot as plt
