@@ -103,7 +103,7 @@ with tab1:
     im1 = Image.open('R.jpg')
 
     img5 = st
-    img5.image(im1)
+    img5.image('image1.png')
     
 
 # Data Analysis
