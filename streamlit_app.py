@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from Scikitlearn.preprocessing import StandardScaler
+from scikit_learn.preprocessing import StandardScaler
 from PIL import Image
 from datetime import datetime, date
 import matplotlib.pyplot as plt
