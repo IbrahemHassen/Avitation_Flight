@@ -50,55 +50,6 @@ with st.sidebar:
 
     st.sidebar.write("")
     st.sidebar.markdown("Made by [Ibrahem Mohye]")
-
-    # filtering Function
-def filter(airline, source, destination, add_info):
-    if airline=='All' and source=='All' and destination=='All' and add_info=='All':
-        filtered_data = data.copy()
-    else:
-        filtered_data = data
-
-        if source != 'All':
-            filtered_data = filtered_data[filtered_data['Source'] == source]
-
-        if destination != 'All':
-            filtered_data = filtered_data[filtered_data['Destination'] == destination]
-
-        if airline != 'All':
-            filtered_data = filtered_data[filtered_data['Airline'] == airline]
-
-        if add_info != 'All':
-            filtered_data = filtered_data[filtered_data['Additional_Info'] == add_info]
-
-    return filtered_data
-
-# Information Cards
-card1, card2, card3, card4 = st.columns((2,2,2,4))
-
-# Filtered DataFrame
-filtered_data = filter(airline, source, destination, add_info)
-
-# Cards Values
-flight_count = filtered_data['Airline'].count()
-highest_Price = filtered_data['Price'].max()
-lowest_Price = filtered_data['Price'].min()
-top_airline = filtered_data['Airline'].value_counts().idxmax()
-# Show The Cards
-card1.metric("Flight Count", f"{flight_count}")
-card2.metric("Highest Price", f"{highest_Price}")
-card3.metric("Lowest Price", f"{lowest_Price}")
-card4.metric("Top Airline", f"{top_airline}")
-
-# Dashboard Tabs
-tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 Insights", "🤖 Prediction"])
-# introduction
-with tab1:
-    st.write("If you are a traveler looking to plan your next trip, or you are an airline or travel agency, "
-         "you need to know about ticket and service price variations.\n"
-         "Airline ticket pricing has become increasingly complex due to factors such as demand fluctuations and seasonal trends.\n"
-         "\n"
-         "My project aims to help you make the right decision and buy the best ticket at the best price by developing a predictive model "
-         "that can accurately estimate flight fares based on the given features.")
    
 
 
