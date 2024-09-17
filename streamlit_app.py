@@ -1,8 +1,8 @@
-جديد: اختصارات لوحة المفاتيح … تم تعديل اختصارات لوحة مفاتيح Drive للسماح لك بالتنقّل باستخدام الأحرف الأولى.
+
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+
 import joblib
 from PIL import Image
 from datetime import datetime, date
